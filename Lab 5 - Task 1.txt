@@ -1,0 +1,45 @@
+Last login: Thu Sep 17 03:40:35 on ttys000
+ ~  cd Downloads/Lab\ 5 
+ ~/Downloads/Lab 5  ls
+Shell
+ ~/Downloads/Lab 5  curl http://files.grouplens.org/datasets/movielens/ml-latest-small.zip --output movies.zip
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  955k  100  955k    0     0  2468k      0 --:--:-- --:--:-- --:--:-- 2468k
+ ~/Downloads/Lab 5  unzip movies.zip
+Archive:  movies.zip
+   creating: ml-latest-small/
+  inflating: ml-latest-small/links.csv  
+  inflating: ml-latest-small/tags.csv  
+  inflating: ml-latest-small/ratings.csv  
+  inflating: ml-latest-small/README.txt  
+  inflating: ml-latest-small/movies.csv  
+ ~/Downloads/Lab 5  ls
+Shell           ml-latest-small movies.zip
+ ~/Downloads/Lab 5  cd ml-latest-small 
+ ~/Downloads/Lab 5/ml-latest-small  head -n10 ratings.csv 
+userId,movieId,rating,timestamp
+1,1,4.0,964982703
+1,3,4.0,964981247
+1,6,4.0,964982224
+1,47,5.0,964983815
+1,50,5.0,964982931
+1,70,3.0,964982400
+1,101,5.0,964980868
+1,110,4.0,964982176
+1,151,5.0,964984041
+ ~/Downloads/Lab 5/ml-latest-small  wc -l ratings.csv 
+  100837 ratings.csv
+ ~/Downloads/Lab 5/ml-latest-small  cat ratings.csv | cut -d \, -f 3 > Ratings.txt
+ ~/Downloads/Lab 5/ml-latest-small  sort -r Ratings.txt -o Ratings.txt
+ ~/Downloads/Lab 5/ml-latest-small  head -n10 Ratings.txt
+rating
+5.0
+5.0
+5.0
+5.0
+5.0
+5.0
+5.0
+5.0
+5.0

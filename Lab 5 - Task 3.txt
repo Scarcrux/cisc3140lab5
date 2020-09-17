@@ -1,0 +1,84 @@
+Last login: Thu Sep 17 03:44:09 on ttys000
+ ~  cd Downloads/Lab\ 5 
+ ~/Downloads/Lab 5  ls
+ ~/Downloads/Lab 5  curl https://static.videezy.com/system/resources/previews/000/045/764/original/318_cat_1.mp4 --output cat.mp4
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 1343k  100 1343k    0     0  5790k      0 --:--:-- --:--:-- --:--:-- 5766k
+ ~/Downloads/Lab 5  ls
+cat.mp4
+ ~/Downloads/Lab 5  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+Password:
+==> This script will install:
+/usr/local/bin/brew
+/usr/local/share/doc/homebrew
+/usr/local/share/man/man1/brew.1
+/usr/local/share/zsh/site-functions/_brew
+/usr/local/etc/bash_completion.d/brew
+/usr/local/Homebrew
+
+Press RETURN to continue or any other key to abort
+==> Downloading and installing Homebrew...
+HEAD is now at 9dd5d4247 Merge pull request #8746 from 0az/fix-sha256-error
+Updated 1 tap (homebrew/core).
+==> Updated Formulae
+carthage                                 wiremock-standalone
+==> Installation successful!
+
+==> Homebrew has enabled anonymous aggregate formulae and cask analytics.
+Read the analytics documentation (and how to opt-out) here:
+  https://docs.brew.sh/Analytics
+No analytics data has been sent yet (or will be during this `install` run).
+
+==> Homebrew is run entirely by unpaid volunteers. Please consider donating:
+  https://github.com/Homebrew/brew#donations
+
+==> Next steps:
+- Run `brew help` to get started
+- Further documentation: 
+    https://docs.brew.sh
+ ~/Downloads/Lab 5  brew install ffmpeg
+Warning: ffmpeg 4.3.1_1 is already installed and up-to-date
+To reinstall 4.3.1_1, run `brew reinstall ffmpeg`
+ ~/Downloads/Lab 5  ffmpeg -i cat.mp4 -f gif cat.gif
+ffmpeg version 4.3.1 Copyright (c) 2000-2020 the FFmpeg developers
+  built with Apple clang version 11.0.3 (clang-1103.0.32.62)
+  configuration: --prefix=/usr/local/Cellar/ffmpeg/4.3.1_1 --enable-shared --enable-pthreads --enable-version3 --enable-avresample --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gnutls --enable-gpl --enable-libaom --enable-libbluray --enable-libdav1d --enable-libmp3lame --enable-libopus --enable-librav1e --enable-librubberband --enable-libsnappy --enable-libsrt --enable-libtesseract --enable-libtheora --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libxvid --enable-lzma --enable-libfontconfig --enable-libfreetype --enable-frei0r --enable-libass --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-librtmp --enable-libspeex --enable-libsoxr --enable-videotoolbox --disable-libjack --disable-indev=jack
+  libavutil      56. 51.100 / 56. 51.100
+  libavcodec     58. 91.100 / 58. 91.100
+  libavformat    58. 45.100 / 58. 45.100
+  libavdevice    58. 10.100 / 58. 10.100
+  libavfilter     7. 85.100 /  7. 85.100
+  libavresample   4.  0.  0 /  4.  0.  0
+  libswscale      5.  7.100 /  5.  7.100
+  libswresample   3.  7.100 /  3.  7.100
+  libpostproc    55.  7.100 / 55.  7.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'cat.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf57.71.100
+  Duration: 00:00:16.32, start: 0.000000, bitrate: 674 kb/s
+    Stream #0:0(eng): Video: h264 (High) (avc1 / 0x31637661), yuv420p, 630x354 [SAR 944:945 DAR 16:9], 671 kb/s, 25 fps, 25 tbr, 12800 tbn, 50 tbc (default)
+    Metadata:
+      handler_name    : VideoHandler
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> gif (native))
+Press [q] to stop, [?] for help
+[swscaler @ 0x7f8164e36000] No accelerated colorspace conversion found from yuv420p to bgr8.
+Output #0, gif, to 'cat.gif':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.45.100
+    Stream #0:0(eng): Video: gif, bgr8, 630x354 [SAR 944:945 DAR 16:9], q=2-31, 200 kb/s, 25 fps, 100 tbn, 25 tbc (default)
+    Metadata:
+      handler_name    : VideoHandler
+      encoder         : Lavc58.91.100 gif
+frame=  174 fps=0.0 q=-0.0 size=    2816kB time=00:00:06.93 bitrate=3328.8kbits/frame=  369 fps=368 q=-0.0 size=    5632kB time=00:00:14.73 bitrate=3132.2kbits/frame=  408 fps=369 q=-0.0 Lsize=    6429kB time=00:00:16.29 bitrate=3232.9kbits/s speed=14.7x    
+video:6429kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.000304%
+ ~/Downloads/Lab 5  ls
+cat.gif cat.mp4
+ ~/Downloads/Lab 5  
