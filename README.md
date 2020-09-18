@@ -5,7 +5,7 @@ For Task 1, I had to select a column from a CSV file using terminal in MacOS. I 
 
 Working with data sets and parsing data and command-line interfaces are all common so this task helped to familiarize those concepts at a basic level.
 
-For Task 2, I had to create a shell script version of task 1. Shell scripts can be great for saving time for repeated tasks because you can throw a bunch of command in a script and even automate them by schedule if you want to.
+For Task 2, I had to create a shell script version of task 1. Shell scripts can be great at saving time for repeated tasks because you can throw a bunch of command in a script and even automate them by schedule if you want to.
 
 I created a basic, static bash script using the nano text editor. First, I navigated to a fresh directory in terminal. Then I opened nano to edit the bash script. I copied and pasted the commands from Task 1 into the bash script. Saved the file and exited nano, then ran the script. The script ran all of the terminal commands with a single command to execute the bash script.
 
